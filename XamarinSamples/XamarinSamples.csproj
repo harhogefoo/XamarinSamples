@@ -66,6 +66,18 @@
     <EmbeddedResource Include="NavigationSample\Page2Xaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabbedPageSample\TabbedPageSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedPageSample\TodayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedPageSample\SchedulePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingPageSample\SettingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -115,6 +127,19 @@
     <Compile Include="NavigationSample\Page2Xaml.xaml.cs">
       <DependentUpon>Page2Xaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TabbedPageSample\TabbedPageSample.xaml.cs">
+      <DependentUpon>TabbedPageSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedPageSample\TodayPage.xaml.cs">
+      <DependentUpon>TodayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedPageSample\SchedulePage.xaml.cs">
+      <DependentUpon>SchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingPageSample\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingPageSample\SettingItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -129,10 +154,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="XamlSamples\packages.config" />
+    <None Include="TabbedLikePage\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="XamlSamples\" />
     <Folder Include="NavigationSample\" />
+    <Folder Include="TabbedPageSample\" />
+    <Folder Include="TabbedLikePage\" />
+    <Folder Include="SettingPageSample\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

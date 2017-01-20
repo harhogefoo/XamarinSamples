@@ -1,0 +1,3 @@
+﻿# TabbedLikePage
+TabbedPageを利用すると，AndroidとiOSでタブの位置が変わってしまうので  
+自前でタブっぽいページを作成する

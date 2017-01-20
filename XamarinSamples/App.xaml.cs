@@ -19,8 +19,11 @@ namespace XamarinSamples
 			// MainPage = new HslColorScrollPage();
 			// MainPage = new KeypadPage();
 			// MainPage = new UseResourceDictionaryPage();
-			var dateStr = DateTime.Now.ToString("u");
-			MainPage = new NavigationPage(new Page1Xaml(dateStr));
+
+			// var dateStr = DateTime.Now.ToString("u");
+			// MainPage = new NavigationPage(new Page1Xaml(dateStr));
+			// MainPage = new TabbedPageSample();
+			MainPage = new SettingPage();
 		}
 
 		protected override void OnStart()
