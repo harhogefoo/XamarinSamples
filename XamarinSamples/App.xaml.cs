@@ -23,7 +23,9 @@ namespace XamarinSamples
 			// var dateStr = DateTime.Now.ToString("u");
 			// MainPage = new NavigationPage(new Page1Xaml(dateStr));
 			// MainPage = new TabbedPageSample();
-			MainPage = new SettingPage();
+			// MainPage = new SettingPage();
+			// MainPage = new FooterButtonPage();
+			MainPage = new TabbedLikePageTop();
 		}
 
 		protected override void OnStart()
