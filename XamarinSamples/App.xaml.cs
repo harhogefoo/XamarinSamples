@@ -9,7 +9,7 @@ namespace XamarinSamples
 		{
 			InitializeComponent();
 
-			// MainPage = new HelloXamlPage();
+			MainPage = new HelloXamlPage();
 			// MainPage = new XamlPlusCodePage();
 			// MainPage = new SharedResourceSample();
 			// MainPage = new StaticConstantsPage();
@@ -26,7 +26,8 @@ namespace XamarinSamples
 			// MainPage = new SettingPage();
 			// MainPage = new FooterButtonPage();
 			// MainPage = new TabbedLikePageTop();
-			MainPage = new CarouselPageSample();
+			MainPage = new NavigationPage(new TabbedLikePageTop()) { BarBackgroundColor = Color.Aqua };
+			// MainPage = new CarouselPageSample();
 			// MainPage = new CaroucelViewSample();
 		}
 

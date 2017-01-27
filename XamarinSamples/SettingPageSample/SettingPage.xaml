@@ -2,15 +2,56 @@
 <ContentPage 
 		xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		x:Class="XamarinSamples.SettingPage">
+		x:Class="XamarinSamples.SettingPage"
+		Title="設定">
 	<ContentPage.Content>
 		<TableView Intent="Settings">
 			<TableView.Root>
-				<TableSection Title="Getting Started">
-					<ViewCell Tapped="test">
-					  <StackLayout Orientation="Horizontal">
-					  	<Label Text="left" />
-							<Label Text="right" />
+				<TableSection>
+					<ViewCell Tapped="ViewCellTapped">
+					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+					    <Label Text ="    " />
+					  	<Label Text="利用者情報" />
+					  	<Image Source="icon_clip"
+									HeightRequest="20"
+									WidthRequest="20"
+									HorizontalOptions="EndAndExpand" />
+					  </StackLayout>
+					</ViewCell>
+					<ViewCell Tapped="ViewCellTapped">
+					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+					    <Label Text ="    " />
+					  	<Label Text="パスコード設定" />
+					  	<Image Source="icon_clip"
+									HeightRequest="20"
+									WidthRequest="20"
+									HorizontalOptions="EndAndExpand" />
+					  </StackLayout>
+					</ViewCell>
+					<ViewCell Tapped="ViewCellTapped">
+					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+					    <Label Text ="    " />
+					  	<Label Text="プレフィックス設定" />
+					  	<Image Source="icon_clip"
+									HeightRequest="20"
+									WidthRequest="20"
+									HorizontalOptions="EndAndExpand" />
+					  </StackLayout>
+					</ViewCell>
+					<ViewCell Tapped="ViewCellTapped">
+					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+					    <Label Text ="    " />
+					  	<Label Text="利用者情報" />
+							<Label Text="right" 
+								HorizontalOptions="EndAndExpand"/>
+					  </StackLayout>
+					</ViewCell>
+					<ViewCell Tapped="ViewCellTapped">
+					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+					    <Label Text ="    " />
+					  	<Label Text="利用者情報" />
+							<Label Text="right" 
+								HorizontalOptions="EndAndExpand"/>
 					  </StackLayout>
 					</ViewCell>
 				</TableSection>

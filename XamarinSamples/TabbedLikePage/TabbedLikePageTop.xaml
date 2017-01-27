@@ -3,7 +3,9 @@
 		xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-		x:Class="XamarinSamples.TabbedLikePageTop">
+		x:Class="XamarinSamples.TabbedLikePageTop"
+		NavigationPage.HasNavigationBar="false"
+		NavigationPage.BackButtonTitle="戻る">
   <ContentPage.Padding>
     <OnPlatform 
 			x:TypeArguments="Thickness" 
@@ -14,7 +16,7 @@
 	<StackLayout>
 		<StackLayout Orientation="Horizontal">
 			<Entry Placeholder="検索" HorizontalOptions="FillAndExpand" />
-			<controls:ImageButton Image="icon_clip.png" ImageHeightRequest="30" ImageWidthRequest="30" />
+			<controls:ImageButton Clicked="ConfigButtonPushed" Image="icon_clip.png" ImageHeightRequest="30" ImageWidthRequest="30" />
 		</StackLayout>
 	    <BoxView Color="Yellow" />
 			<BoxView Color="Red" VerticalOptions="FillAndExpand" />

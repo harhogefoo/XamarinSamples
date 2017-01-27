@@ -22,7 +22,7 @@ namespace XamarinSamples
 
 		}
 
-		void test(object sender, EventArgs e)
+		void ViewCellTapped(object sender, EventArgs e)
 		{
 			System.Diagnostics.Debug.WriteLine("クリック");
 

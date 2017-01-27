@@ -44,5 +44,10 @@ namespace XamarinSamples
 		{
 
 		}
+
+		async void ConfigButtonPushed(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new SettingPage());
+		}
 	}
 }
