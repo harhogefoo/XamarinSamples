@@ -25,7 +25,9 @@ namespace XamarinSamples
 			// MainPage = new TabbedPageSample();
 			// MainPage = new SettingPage();
 			// MainPage = new FooterButtonPage();
-			MainPage = new TabbedLikePageTop();
+			// MainPage = new TabbedLikePageTop();
+			MainPage = new CarouselPageSample();
+			// MainPage = new CaroucelViewSample();
 		}
 
 		protected override void OnStart()

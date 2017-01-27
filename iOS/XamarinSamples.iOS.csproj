@@ -125,6 +125,9 @@
     <Reference Include="XLabs.Forms.iOS">
       <HintPath>..\packages\XLabs.Forms.2.0.5782\lib\Xamarin.iOS10\XLabs.Forms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.CarouselView">
+      <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamarinSamples\XamarinSamples.csproj">

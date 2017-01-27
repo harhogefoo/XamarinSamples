@@ -84,6 +84,12 @@
     <EmbeddedResource Include="TabbedLikePage\TabbedLikePageTop.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarouselPageSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaroucelViewSample\CaroucelViewSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -152,6 +158,14 @@
     <Compile Include="TabbedLikePage\TabbedLikePageTop.xaml.cs">
       <DependentUpon>TabbedLikePageTop.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CarouselPageSample.xaml.cs">
+      <DependentUpon>CarouselPageSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaroucelViewSample\CaroucelViewSample.xaml.cs">
+      <DependentUpon>CaroucelViewSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaroucelViewSample\MonkeysViewModel.cs" />
+    <Compile Include="CaroucelViewSample\Zoo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib">
@@ -181,6 +195,9 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.CarouselView">
+      <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="XamlSamples\packages.config" />
@@ -193,6 +210,7 @@
     <Folder Include="TabbedPageSample\" />
     <Folder Include="TabbedLikePage\" />
     <Folder Include="SettingPageSample\" />
+    <Folder Include="CaroucelViewSample\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
