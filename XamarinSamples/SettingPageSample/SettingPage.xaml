@@ -4,6 +4,16 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="XamarinSamples.SettingPage"
 		Title="設定">
+	<ContentPage.Resources>
+	  <ResourceDictionary>
+		<Style x:Key="imageStyle" TargetType="Image">
+		  <Setter Property="Source" Value="icon_clip" />
+			<Setter Property="HeightRequest" Value="20" />
+			<Setter Property="WidthRequest" Value="20" />
+			<Setter Property="HorizontalOptions" Value="EndAndExpand" />
+		</Style>
+			</ResourceDictionary>
+	</ContentPage.Resources>
 	<ContentPage.Content>
 		<TableView Intent="Settings">
 			<TableView.Root>
@@ -12,46 +22,35 @@
 					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
 					    <Label Text ="    " />
 					  	<Label Text="利用者情報" />
-					  	<Image Source="icon_clip"
-									HeightRequest="20"
-									WidthRequest="20"
-									HorizontalOptions="EndAndExpand" />
+					  	<Image Style="{StaticResource imageStyle}" />
 					  </StackLayout>
 					</ViewCell>
 					<ViewCell Tapped="ViewCellTapped">
 					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
 					    <Label Text ="    " />
 					  	<Label Text="パスコード設定" />
-					  	<Image Source="icon_clip"
-									HeightRequest="20"
-									WidthRequest="20"
-									HorizontalOptions="EndAndExpand" />
+					  	<Image Style="{StaticResource imageStyle}" />
 					  </StackLayout>
 					</ViewCell>
 					<ViewCell Tapped="ViewCellTapped">
 					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
 					    <Label Text ="    " />
 					  	<Label Text="プレフィックス設定" />
-					  	<Image Source="icon_clip"
-									HeightRequest="20"
-									WidthRequest="20"
-									HorizontalOptions="EndAndExpand" />
+					  	<Image Style="{StaticResource imageStyle}" />
 					  </StackLayout>
 					</ViewCell>
 					<ViewCell Tapped="ViewCellTapped">
 					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
 					    <Label Text ="    " />
 					  	<Label Text="利用者情報" />
-							<Label Text="right" 
-								HorizontalOptions="EndAndExpand"/>
+					  	<Image Style="{StaticResource imageStyle}" />
 					  </StackLayout>
 					</ViewCell>
 					<ViewCell Tapped="ViewCellTapped">
 					  <StackLayout Orientation="Horizontal" VerticalOptions="Center">
 					    <Label Text ="    " />
 					  	<Label Text="利用者情報" />
-							<Label Text="right" 
-								HorizontalOptions="EndAndExpand"/>
+					  	<Image Style="{StaticResource imageStyle}" />
 					  </StackLayout>
 					</ViewCell>
 				</TableSection>
