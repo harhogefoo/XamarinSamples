@@ -18,8 +18,7 @@ using XLabs.Platform.Services;
 namespace XamarinSamples.Droid
 {
 	[Activity(Label = "XamarinSamples.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	// public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-	public class MainActivity : XFormsApplicationDroid
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate(Bundle bundle)
 		{

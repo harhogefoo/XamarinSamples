@@ -9,26 +9,28 @@ namespace XamarinSamples
 		{
 			InitializeComponent();
 
-			MainPage = new HelloXamlPage();
-			// MainPage = new XamlPlusCodePage();
-			// MainPage = new SharedResourceSample();
-			// MainPage = new StaticConstantsPage();
-			// MainPage = new SliderBindingPage();
-			// MainPage = new OneShotDateTimePage();
-			// MainPage = new ClockPage();
-			// MainPage = new HslColorScrollPage();
-			// MainPage = new KeypadPage();
-			// MainPage = new UseResourceDictionaryPage();
+            // MainPage = new HelloXamlPage();
+            // MainPage = new XamlPlusCodePage();
+            // MainPage = new SharedResourceSample();
+            // MainPage = new StaticConstantsPage();
+            // MainPage = new SliderBindingPage();
+            // MainPage = new OneShotDateTimePage();
+            // MainPage = new ClockPage();
+            // MainPage = new HslColorScrollPage();
+            // MainPage = new KeypadPage();
+            // MainPage = new UseResourceDictionaryPage();
 
-			// var dateStr = DateTime.Now.ToString("u");
-			// MainPage = new NavigationPage(new Page1Xaml(dateStr));
-			// MainPage = new TabbedPageSample();
-			// MainPage = new SettingPage();
-			// MainPage = new FooterButtonPage();
-			// MainPage = new TabbedLikePageTop();
-			MainPage = new NavigationPage(new TabbedLikePageTop()) { BarBackgroundColor = Color.Aqua };
-			// MainPage = new CarouselPageSample();
-			// MainPage = new CaroucelViewSample();
+            // var dateStr = DateTime.Now.ToString("u");
+            // MainPage = new NavigationPage(new Page1Xaml(dateStr));
+            // MainPage = new TabbedPageSample();
+            // MainPage = new SettingPage();
+            // MainPage = new FooterButtonPage();
+            // MainPage = new TabbedLikePageTop();
+            // MainPage = new NavigationPage(new TabbedLikePageTop()) { BarBackgroundColor = Color.Aqua };
+            // MainPage = new CarouselPageSample();
+            // MainPage = new CaroucelViewSample();
+            // MainPage = new HttpClientSample();
+            MainPage = new CheckNetworkConnectionPage();
 		}
 
 		protected override void OnStart()
