@@ -10,7 +10,7 @@ namespace XamarinSamples
         public CheckNetworkConnectionPage()
         {
             InitializeComponent();
-            // CrossConnectivity.Current.ConnectivityTypeChanged += Current_ConnectivityTypeChanged;
+            CrossConnectivity.Current.ConnectivityTypeChanged += Current_ConnectivityTypeChanged;
         }
 
         private async void Current_ConnectivityTypeChanged(object sender, Plugin.Connectivity.Abstractions.ConnectivityTypeChangedEventArgs e)
