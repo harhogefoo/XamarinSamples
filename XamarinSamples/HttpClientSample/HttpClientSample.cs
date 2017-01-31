@@ -6,6 +6,9 @@ using Xamarin.Forms;
 
 namespace XamarinSamples
 {
+    /// <summary>
+    /// iOSのみ動作．Androidは動作せず...
+    /// </summary>
     public class HttpClientSample : ContentPage
     {
         public HttpClientSample()

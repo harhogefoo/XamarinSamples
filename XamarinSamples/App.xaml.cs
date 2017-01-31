@@ -30,7 +30,8 @@ namespace XamarinSamples
             // MainPage = new CarouselPageSample();
             // MainPage = new CaroucelViewSample();
             // MainPage = new HttpClientSample();
-            MainPage = new CheckNetworkConnectionPage();
+            // MainPage = new CheckNetworkConnectionPage();
+            MainPage = new LoginPage();
 		}
 
 		protected override void OnStart()
