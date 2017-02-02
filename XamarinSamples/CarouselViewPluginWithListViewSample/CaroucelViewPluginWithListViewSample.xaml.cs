@@ -3,28 +3,47 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
-
-
+using CarouselView.FormsPlugin.Abstractions;
 
 namespace XamarinSamples
 {
-    public partial class CaroucelViewSample : ContentPage
+    public partial class CaroucelViewPluginWithListViewSample : ContentPage
     {
         ObservableCollection<Zoo> Zoos { get; set; }
 
-        public CaroucelViewSample()
+        public CaroucelViewPluginWithListViewSample()
         {
             InitializeComponent();
 
             MonkeysViewModel mvm = new MonkeysViewModel();
 
-            Xamarin.Forms.CarouselView cv = new Xamarin.Forms.CarouselView();
-            cv.ItemSelected += (sender, e) =>
+            var cv = new CarouselViewControl
             {
-                Utility.Log("selected");
-                cv.Position = 2;
+                Orientation = Orientation.Horizontal,
             };
-
+            cv.Focused += (sender, e) =>
+            {
+                Utility.Log("focus!");
+            };
+            cv.MeasureInvalidated += (sender, e) =>
+            {
+                Utility.Log("measure");
+            };
+            cv.PropertyChanged += (sender, e) =>
+            {
+                Utility.Log("pro");
+            };
+            cv.PropertyChanging += (sender, e) =>
+            {
+                Utility.Log("proing");
+            };
+            cv.PositionSelected += (sender, e) =>
+            {
+                Utility.Log("pos");
+                Utility.Log(cv.X);
+                Utility.Log(cv.AnchorX);
+                Utility.Log(cv.TranslationX);
+            };
 
             DataTemplate dataTemplate = new DataTemplate(() =>
             {
@@ -32,6 +51,10 @@ namespace XamarinSamples
                 RowDefinitionCollection rd = new RowDefinitionCollection();
                 rd.Add(new RowDefinition { Height = GridLength.Star });
                 rd.Add(new RowDefinition { Height = GridLength.Auto });
+
+                ListView listView = new ListView();
+                // listView.SetBinding(ListView.BindingContextProperty, "Zoo");
+                listView.ItemsSource = new ObservableCollection<int> { 1, 2, 3, 4, 5 };
 
                 grid.RowDefinitions = rd;
                 grid.SetBinding(Grid.BindingContextProperty, "Zoo");
@@ -57,12 +80,12 @@ namespace XamarinSamples
                 label.VerticalOptions = LayoutOptions.CenterAndExpand;
                 stackLayout.Children.Add(label);
 
-                return grid;
+                return listView;
             });
 
             cv.ItemsSource = mvm.Zoos;
             cv.ItemTemplate = dataTemplate;
-            layout.Children.Add(cv);
+            ParentGrid.Children.Add(cv);
 
             var zoo = new Zoo
             {
@@ -70,7 +93,7 @@ namespace XamarinSamples
                 Name = "Phoenix Zoo"
             };
             mvm.Unshift(zoo);
-            cv.Position = 2;
+            cv.Position = 1;
         }
 
     }

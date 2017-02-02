@@ -3,28 +3,24 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
-
-
+using CarouselView.FormsPlugin.Abstractions;
 
 namespace XamarinSamples
 {
-    public partial class CaroucelViewSample : ContentPage
+    public partial class CaroucelViewPluginSample : ContentPage
     {
         ObservableCollection<Zoo> Zoos { get; set; }
 
-        public CaroucelViewSample()
+        public CaroucelViewPluginSample()
         {
             InitializeComponent();
 
             MonkeysViewModel mvm = new MonkeysViewModel();
 
-            Xamarin.Forms.CarouselView cv = new Xamarin.Forms.CarouselView();
-            cv.ItemSelected += (sender, e) =>
+            var cv = new CarouselViewControl
             {
-                Utility.Log("selected");
-                cv.Position = 2;
+                Orientation = Orientation.Horizontal,
             };
-
 
             DataTemplate dataTemplate = new DataTemplate(() =>
             {
@@ -62,7 +58,7 @@ namespace XamarinSamples
 
             cv.ItemsSource = mvm.Zoos;
             cv.ItemTemplate = dataTemplate;
-            layout.Children.Add(cv);
+            ParentGrid.Children.Add(cv);
 
             var zoo = new Zoo
             {
@@ -70,7 +66,7 @@ namespace XamarinSamples
                 Name = "Phoenix Zoo"
             };
             mvm.Unshift(zoo);
-            cv.Position = 2;
+            cv.Position = 1;
         }
 
     }

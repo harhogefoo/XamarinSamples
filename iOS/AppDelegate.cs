@@ -12,6 +12,8 @@ using XLabs.Platform.Services.Media;
 using XLabs.Ioc;
 using XLabs.Platform.Services;
 
+using CarouselView.FormsPlugin.iOS;
+
 namespace XamarinSamples.iOS
 {
 	[Register("AppDelegate")]
@@ -20,6 +22,7 @@ namespace XamarinSamples.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
+            CarouselViewRenderer.Init();
 
 			LoadApplication(new App());
 

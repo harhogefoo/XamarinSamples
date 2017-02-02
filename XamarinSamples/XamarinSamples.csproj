@@ -84,9 +84,6 @@
     <EmbeddedResource Include="TabbedLikePage\TabbedLikePageTop.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="CarouselPageSample.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="CaroucelViewSample\CaroucelViewSample.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -94,6 +91,21 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPageSample\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarouselPageSample\CarouselPageSample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarouselViewPluginSample\CarouselViewPluginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarouselViewPluginWithListViewSample\CarouselViewPluginWithListViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollViewSample\ScrollViewSamplePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfiniteListViewSample\InfiniteListViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -164,14 +176,9 @@
     <Compile Include="TabbedLikePage\TabbedLikePageTop.xaml.cs">
       <DependentUpon>TabbedLikePageTop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CarouselPageSample.xaml.cs">
-      <DependentUpon>CarouselPageSample.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CaroucelViewSample\CaroucelViewSample.xaml.cs">
       <DependentUpon>CaroucelViewSample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CaroucelViewSample\MonkeysViewModel.cs" />
-    <Compile Include="CaroucelViewSample\Zoo.cs" />
     <Compile Include="HasNetworkConnection\DeviceState.cs" />
     <Compile Include="HasNetworkConnection\CheckNetworkConnectionPage.xaml.cs">
       <DependentUpon>CheckNetworkConnectionPage.xaml</DependentUpon>
@@ -180,6 +187,27 @@
     <Compile Include="LoginPageSample\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CarouselPageSample\CarouselPageSample.xaml.cs">
+      <DependentUpon>CarouselPageSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="CarouselViewPluginSample\CaroucelViewPluginSample.xaml.cs">
+      <DependentUpon>CarouselViewPluginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\MonkeysViewModel.cs" />
+    <Compile Include="Core\Zoo.cs" />
+    <Compile Include="CarouselViewPluginWithListViewSample\CaroucelViewPluginWithListViewSample.xaml.cs">
+      <DependentUpon>CarouselViewPluginWithListViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollViewSample\ScrollViewSamplePage.xaml.cs">
+      <DependentUpon>ScrollViewSamplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfiniteListViewSample\InifiniteListView.cs" />
+    <Compile Include="InfiniteListViewSample\InfiniteListViewPage.xaml.cs">
+      <DependentUpon>InfiniteListViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Book.cs" />
+    <Compile Include="Core\BrowseBookListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib">
@@ -230,6 +258,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="CarouselView.FormsPlugin.Abstractions">
+      <HintPath>..\packages\CarouselView.FormsPlugin.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="XamlSamples\packages.config" />
@@ -246,6 +277,12 @@
     <Folder Include="HasNetworkConnection\" />
     <Folder Include="HttpClientSample\" />
     <Folder Include="LoginPageSample\" />
+    <Folder Include="CarouselPageSample\" />
+    <Folder Include="CarouselViewPluginSample\" />
+    <Folder Include="Core\" />
+    <Folder Include="CarouselViewPluginWithListViewSample\" />
+    <Folder Include="ScrollViewSample\" />
+    <Folder Include="InfiniteListViewSample\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

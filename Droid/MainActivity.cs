@@ -14,6 +14,7 @@ using XLabs.Platform.Services.Media;
 using XLabs.Ioc;
 using XLabs.Platform.Services;
 
+using CarouselView.FormsPlugin.Android;
 
 namespace XamarinSamples.Droid
 {
@@ -22,12 +23,13 @@ namespace XamarinSamples.Droid
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
-			// TabLayoutResource = Resource.Layout.Tabbar;
-			// ToolbarResource = Resource.Layout.Toolbar;
+			TabLayoutResource = Resource.Layout.Tabbar;
+			ToolbarResource = Resource.Layout.Toolbar;
 
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
+            CarouselViewRenderer.Init();
 
 			LoadApplication(new App());
 		}

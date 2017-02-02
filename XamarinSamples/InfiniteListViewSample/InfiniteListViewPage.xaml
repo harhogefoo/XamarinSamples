@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSamples.InfiniteListViewPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="BookTitleLabel" TargetType="Label">
+			  <Setter Property="FontAttributes" Value="Bold" />
+				<Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<ListView x:Name="BrowseBookList" CachingStrategy="RecycleElement" HasUnevenRows="True" HorizontalOptions="FillAndExpand" ItemAppearing="BrowseBookList_ItemAppearing" ItemSelected="BrowseBookList_ItemSelected" SeparatorVisibility="None" VerticalOptions="FillAndExpand">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid BackgroundColor="{Binding ViewCellBackgroundColor}" ColumnSpacing="0" Padding="8,5">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*" />
+								</Grid.ColumnDefinitions>
+								<!--  Book Title  -->
+								<Label Grid.Row="0" ClassId="{Binding BookSerialNO}" Style="{StaticResource BookTitleLabel}" Text="{Binding BookTitle}" />
+								<!--  Book Author - Publishing  -->
+								<Label Grid.Row="1" Style="{StaticResource BookTitleLabel}" Text="{Binding BookAuthorPublishing}" />
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

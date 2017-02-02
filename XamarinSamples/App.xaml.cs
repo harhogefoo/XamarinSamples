@@ -29,9 +29,13 @@ namespace XamarinSamples
             // MainPage = new NavigationPage(new TabbedLikePageTop()) { BarBackgroundColor = Color.Aqua };
             // MainPage = new CarouselPageSample();
             // MainPage = new CaroucelViewSample();
+            // MainPage = new CaroucelViewPluginSample();
+            // MainPage = new CaroucelViewPluginWithListViewSample();
             // MainPage = new HttpClientSample();
             // MainPage = new CheckNetworkConnectionPage();
-            MainPage = new LoginPage();
+            // MainPage = new LoginPage();
+            // MainPage = new ScrollViewSamplePage();
+            MainPage = new InfiniteListViewPage();
 		}
 
 		protected override void OnStart()
