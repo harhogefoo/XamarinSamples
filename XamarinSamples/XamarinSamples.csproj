@@ -108,6 +108,15 @@
     <EmbeddedResource Include="InfiniteListViewSample\InfiniteListViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="OnPlatformSample\DevicePageXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorizontalListViewSample\HorizontalListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TryDevicePage\TryDevicePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -208,6 +217,16 @@
     </Compile>
     <Compile Include="Core\Book.cs" />
     <Compile Include="Core\BrowseBookListViewModel.cs" />
+    <Compile Include="OnPlatformSample\DevicePage.cs" />
+    <Compile Include="OnPlatformSample\DevicePageXaml.xaml.cs">
+      <DependentUpon>DevicePageXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HorizontalListViewSample\HorizontalListView.xaml.cs">
+      <DependentUpon>HorizontalListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TryDevicePage\TryDevicePage.xaml.cs">
+      <DependentUpon>TryDevicePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib">
@@ -261,6 +280,9 @@
     <Reference Include="CarouselView.FormsPlugin.Abstractions">
       <HintPath>..\packages\CarouselView.FormsPlugin.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="HorizontalList">
+      <HintPath>..\packages\HorizontalListView1.1.1.1.0\lib\HorizontalList.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="XamlSamples\packages.config" />
@@ -283,6 +305,9 @@
     <Folder Include="CarouselViewPluginWithListViewSample\" />
     <Folder Include="ScrollViewSample\" />
     <Folder Include="InfiniteListViewSample\" />
+    <Folder Include="OnPlatformSample\" />
+    <Folder Include="HorizontalListViewSample\" />
+    <Folder Include="TryDevicePage\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

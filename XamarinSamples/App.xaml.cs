@@ -35,7 +35,16 @@ namespace XamarinSamples
             // MainPage = new CheckNetworkConnectionPage();
             // MainPage = new LoginPage();
             // MainPage = new ScrollViewSamplePage();
-            MainPage = new InfiniteListViewPage();
+            // MainPage = new InfiniteListViewPage();
+
+            var csTab = new TabbedPage();
+
+            csTab.Children.Add(new DevicePage { Title = "C#", Icon = "icon_clip.png" });
+            csTab.Children.Add(new DevicePageXaml { Title = "Xaml", Icon = "icon_clip.png" });
+
+            //MainPage = csTab;
+            // MainPage = new HorizontalListView();
+            MainPage = new TryDevicePage();
 		}
 
 		protected override void OnStart()

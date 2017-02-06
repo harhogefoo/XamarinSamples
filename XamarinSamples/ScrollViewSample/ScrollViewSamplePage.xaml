@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSamples.ScrollViewSamplePage">
 	<ContentPage.Content>
-		<ScrollView Orientation="Horizontal">
-			<StackLayout Orientation="Horizontal">
-				<BoxView BackgroundColor="Red" HeightRequest="600" WidthRequest="600" />
-        <Entry />
-			</StackLayout>
+		<ScrollView x:Name="scrollView" Orientation="Horizontal">
 		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>
