@@ -56,29 +56,29 @@ namespace XamarinSamples
                 // listView.SetBinding(ListView.BindingContextProperty, "Zoo");
                 listView.ItemsSource = new ObservableCollection<int> { 1, 2, 3, 4, 5 };
 
-                grid.RowDefinitions = rd;
-                grid.SetBinding(Grid.BindingContextProperty, "Zoo");
+                //grid.RowDefinitions = rd;
+                //grid.SetBinding(Grid.BindingContextProperty, "Zoo");
 
-                Image image = new Image();
-                image.SetBinding(Image.SourceProperty, "Image");
-                image.Aspect = Aspect.AspectFill;
-                grid.Children.Add(image, 0, 0);
-                Grid.SetRowSpan(image, 2);
+                //Image image = new Image();
+                //image.SetBinding(Image.SourceProperty, "Image");
+                //image.Aspect = Aspect.AspectFill;
+                //grid.Children.Add(image, 0, 0);
+                //Grid.SetRowSpan(image, 2);
 
-                StackLayout stackLayout = new StackLayout
-                {
-                    BackgroundColor = Color.FromHex("#80000000"),
-                    Padding = 12,
-                };
-                grid.Children.Add(stackLayout, 0, 1);
+                //StackLayout stackLayout = new StackLayout
+                //{
+                //    BackgroundColor = Color.FromHex("#80000000"),
+                //    Padding = 12,
+                //};
+                //grid.Children.Add(stackLayout, 0, 1);
 
-                Label label = new Label();
-                label.SetBinding(Label.TextProperty, "Name");
-                label.TextColor = Color.White;
-                label.FontSize = 16;
-                label.HorizontalOptions = LayoutOptions.Center;
-                label.VerticalOptions = LayoutOptions.CenterAndExpand;
-                stackLayout.Children.Add(label);
+                //Label label = new Label();
+                //label.SetBinding(Label.TextProperty, "Name");
+                //label.TextColor = Color.White;
+                //label.FontSize = 16;
+                //label.HorizontalOptions = LayoutOptions.Center;
+                //label.VerticalOptions = LayoutOptions.CenterAndExpand;
+                //stackLayout.Children.Add(label);
 
                 return listView;
             });
@@ -87,12 +87,12 @@ namespace XamarinSamples
             cv.ItemTemplate = dataTemplate;
             ParentGrid.Children.Add(cv);
 
-            var zoo = new Zoo
-            {
-                ImageUrl = "http://content.screencast.com/users/JamesMontemagno/folders/Jing/media/e8179889-8189-4acb-bac5-812611199a03/2016-06-02_1053.png",
-                Name = "Phoenix Zoo"
-            };
-            mvm.Unshift(zoo);
+            //var zoo = new Zoo
+            //{
+            //    ImageUrl = "http://content.screencast.com/users/JamesMontemagno/folders/Jing/media/e8179889-8189-4acb-bac5-812611199a03/2016-06-02_1053.png",
+            //    Name = "Phoenix Zoo"
+            //};
+            //mvm.Unshift(zoo);
             cv.Position = 1;
         }
 
