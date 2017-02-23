@@ -6994,6 +6994,9 @@ namespace XamarinSamples.Droid
 			// aapt resource value: 0x7f09017a
 			public const int MyTheme_Base = 2131296634;
 			
+			// aapt resource value: 0x7f09017c
+			public const int NoShadowButton = 2131296636;
+			
 			// aapt resource value: 0x7f09004b
 			public const int Platform_AppCompat = 2131296331;
 			

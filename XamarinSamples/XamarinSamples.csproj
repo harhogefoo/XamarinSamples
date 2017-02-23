@@ -227,6 +227,10 @@
     <Compile Include="TryDevicePage\TryDevicePage.xaml.cs">
       <DependentUpon>TryDevicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ScrollViewSample\PACDHeaderBox.cs" />
+    <Compile Include="ScrollViewSample\PACDHeaderScrollMenuButton.cs" />
+    <Compile Include="ScrollViewSample\PACDCarouselPageView.cs" />
+    <Compile Include="ScrollViewSample\PACDEventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib">

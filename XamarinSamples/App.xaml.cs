@@ -44,7 +44,7 @@ namespace XamarinSamples
 
             //MainPage = csTab;
             // MainPage = new HorizontalListView();
-            MainPage = new TryDevicePage();
+			MainPage = new CaroucelViewPluginWithListViewSample();
 		}
 
 		protected override void OnStart()

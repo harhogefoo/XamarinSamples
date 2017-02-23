@@ -5,35 +5,25 @@ using Xamarin.Forms;
 
 namespace XamarinSamples
 {
-    public partial class ScrollViewSamplePage : ContentPage
+	public partial class ScrollViewSamplePage : ContentPage
     {
-        public ScrollViewSamplePage()
-        {
-            InitializeComponent();
 
-            StackLayout stack = new StackLayout()
-            {
-                Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                HeightRequest = 200,
-            };
+		public ScrollViewSamplePage()
+		{
+			InitializeComponent();
 
-            for (var i = 0; i < 100; i++)
-            {
-                Button button = new Button
-                {
-                    Text = "Button-" + i.ToString()
-                };
+			System.Diagnostics.Debug.WriteLine("Constractor");
 
-                stack.Children.Add(button);
-            };
-            scrollView.Content = stack;
+			var headerView = new PACDHeaderBox
+			{
+				BackgroundColor = Color.FromHex("#3BB0C9"),
+			};
 
-            scrollView.Scrolled += (sender, e) =>
-            {
-                Utility.Log("ed");
+			var layout = new AbsoluteLayout();
+			layout.Children.Add(headerView, new Point(0, 0));
 
-            };
+			Content = layout;
+
         }
     }
 }
