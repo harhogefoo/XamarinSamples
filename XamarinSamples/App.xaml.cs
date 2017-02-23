@@ -9,6 +9,7 @@ namespace XamarinSamples
 		{
 			InitializeComponent();
 
+            Utility.Log("App");
             // MainPage = new HelloXamlPage();
             // MainPage = new XamlPlusCodePage();
             // MainPage = new SharedResourceSample();
@@ -37,14 +38,15 @@ namespace XamarinSamples
             // MainPage = new ScrollViewSamplePage();
             // MainPage = new InfiniteListViewPage();
 
-            var csTab = new TabbedPage();
+            //var csTab = new TabbedPage();
 
-            csTab.Children.Add(new DevicePage { Title = "C#", Icon = "icon_clip.png" });
-            csTab.Children.Add(new DevicePageXaml { Title = "Xaml", Icon = "icon_clip.png" });
+            //csTab.Children.Add(new DevicePage { Title = "C#", Icon = "icon_clip.png" });
+            //csTab.Children.Add(new DevicePageXaml { Title = "Xaml", Icon = "icon_clip.png" });
 
-            //MainPage = csTab;
+            // MainPage = csTab;
             // MainPage = new HorizontalListView();
-			MainPage = new CaroucelViewPluginWithListViewSample();
+            // MainPage = new TryDevicePage();
+            MainPage = new Bottombar.XamarinForms.BottomBarPage();
 		}
 
 		protected override void OnStart()

@@ -117,6 +117,12 @@
     <EmbeddedResource Include="TryDevicePage\TryDevicePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="BottomNavigationPage\BottomNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BottomNavigationPage\Page3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -227,10 +233,15 @@
     <Compile Include="TryDevicePage\TryDevicePage.xaml.cs">
       <DependentUpon>TryDevicePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ScrollViewSample\PACDHeaderBox.cs" />
-    <Compile Include="ScrollViewSample\PACDHeaderScrollMenuButton.cs" />
-    <Compile Include="ScrollViewSample\PACDCarouselPageView.cs" />
-    <Compile Include="ScrollViewSample\PACDEventManager.cs" />
+    <Compile Include="BottomNavigationPage\BottomBarPage.cs" />
+    <Compile Include="BottomNavigationPage\BottomBarPageExtensions.cs" />
+    <Compile Include="BottomNavigationPage\BottomNavigationPage.xaml.cs">
+      <DependentUpon>BottomNavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BottomNavigationPage\Page1.cs" />
+    <Compile Include="BottomNavigationPage\Page3.xaml.cs">
+      <DependentUpon>Page3.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib">
@@ -312,6 +323,7 @@
     <Folder Include="OnPlatformSample\" />
     <Folder Include="HorizontalListViewSample\" />
     <Folder Include="TryDevicePage\" />
+    <Folder Include="BottomNavigationPage\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

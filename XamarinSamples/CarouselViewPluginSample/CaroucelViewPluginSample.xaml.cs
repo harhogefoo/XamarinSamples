@@ -15,6 +15,13 @@ namespace XamarinSamples
         {
             InitializeComponent();
 
+            var panGesture = new PanGestureRecognizer();
+            panGesture.PanUpdated += (sender, e) =>
+            {
+                Utility.Log(sender.ToString() + ": pan");
+            };
+            Utility.Log("CaroucelViewPluginSample");
+
             MonkeysViewModel mvm = new MonkeysViewModel();
 
             var cv = new CarouselViewControl
@@ -37,6 +44,7 @@ namespace XamarinSamples
                 image.Aspect = Aspect.AspectFill;
                 grid.Children.Add(image, 0, 0);
                 Grid.SetRowSpan(image, 2);
+                // image.GestureRecognizers.Add(panGesture);
 
                 StackLayout stackLayout = new StackLayout
                 {
@@ -67,6 +75,25 @@ namespace XamarinSamples
             };
             mvm.Unshift(zoo);
             cv.Position = 1;
+
+
+            var gesture = new TapGestureRecognizer();
+            gesture.Tapped += (sender, e) =>
+            {
+                Utility.Log("tapped");
+            };
+            cv.GestureRecognizers.Add(gesture);
+
+            cv.GestureRecognizers.Add(panGesture);
+            var pinchGesture = new PinchGestureRecognizer();
+            pinchGesture.PinchUpdated += (sender, e) =>
+            {
+                Utility.Log("pinch");
+            };
+
+
+
+            layout.GestureRecognizers.Add(panGesture);
         }
 
     }
